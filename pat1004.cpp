@@ -27,7 +27,7 @@ typedef pair<ll, int> pli;
 typedef pair<ll, ll> pll;
 const int maxn = 1e5 + 7;
 vector<int>tree[maxn];
-int n,m;
+int n,m,maxLevel = -1;
 int F[maxn];
 void init(void){
 	memset(F,0,sizeof F);
@@ -36,7 +36,7 @@ void init(void){
 }
 
 int read(void){
-	cin>>n
+	cin>>n;
 	if(n == 0) return 0;
 	cin>>m;
 	while(m--){
@@ -55,7 +55,8 @@ int read(void){
 
 
 void find(int level,int root){
-	if((int))tree[root].size == 0){
+	maxLevel = level > maxLevel ? level : maxLevel;
+	if( (int)tree[root].size() == 0){
 		F[level]++;
 		return;
 	}
@@ -65,13 +66,13 @@ void find(int level,int root){
 }
 
 void write(void){
-	for(int i = 1 ; i <= n ; i++)
-		cout<<F[i]<<(i == n ? '\n' : ' ')<<endl;
+	for(int i = 1 ; i <= maxLevel ; i++)
+		cout<<F[i]<<(i == maxLevel ? '\n' : ' ');
 }
 void solve(void)
 {
-	 while(read()){
-	 	find();
+	 if(init(),read()){
+	 	find(1,1);
 		write();
 	 }
 }
