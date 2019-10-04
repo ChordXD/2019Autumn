@@ -34,7 +34,6 @@ void init(void){
 	for(int i = 0 ; i < maxn ; i++)
 		tree[i].clear();
 }
-
 int read(void){
 	cin>>n;
 	if(n == 0) return 0;

@@ -77,6 +77,7 @@ void write(void){
 }
 void solve(void)
 {
+
 	 read();
 	 write();
 }
