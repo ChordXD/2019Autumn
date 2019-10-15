@@ -39,8 +39,16 @@ struct man{
 	}
 };
 
-vector<int> read(void){
 
+vector<man> read(void){
+	int n,w;
+	scanf("%d%d",&n,&w);
+	vector<man>p(n);
+	for(int i = 0 ; i < n ; i++){
+		p[i].manCin();
+	}
+	sort(p.begin(),p.end());
+	return p;
 }
 
 void solve(void){
