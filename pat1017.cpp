@@ -40,7 +40,7 @@ struct man{
 };
 
 vector<int> read(void){
-		
+
 }
 
 void solve(void){
